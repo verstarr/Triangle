@@ -118,63 +118,27 @@ public class Triangle extends Shape {
 
     /**
      * Triangle is acute
-     * (a^2 + b^2 > c^2)
+     * Finds the dot product for each point
      **/
     public boolean isAcute() {
-        double d1 = v1.distance(v2);
-        double d2 = v1.distance(v3);
-        double d3 = v2.distance(v3);
-        double a = 0;
-        double b = 0;
-        double c = Math.max(Math.max(d1, d2), d3);
-        if (c == d1) {
-            a = d2;
-            b = d3;
-        }
-        else if (c == d2) {
-            a = d1;
-            b = d3;
-        }
-        else if (c == d3) {
-            a = d1;
-            b = d2;
-        }
-        else {
-            return false;
-        }
+        double dotAB = (v1.getX() - v3.getX()) * (v2.getX() - v3.getX()) + (v1.getY() - v3.getY()) * (v2.getY() - v3.getY());
+        double dotBC = (v2.getX() - v1.getX()) * (v3.getX() - v1.getX()) + (v2.getY() - v1.getY()) * (v3.getY() - v1.getY());
+        double dotAC = (v1.getX() - v2.getX()) * (v3.getX() - v2.getX()) + (v1.getY() - v2.getY()) * (v3.getY() - v2.getY());
 
-        return Math.pow(a, 2) + Math.pow(b, 2) > Math.pow(c, 2);
+        return dotAB * dotAC * dotBC > 0;
     }
 
 
     /**
      * Triangle is obtuse
-     * (a^2 + b^2 < c^2)
+     * Finds the dot product for each point
      **/
     public boolean isObtuse() {
-        double d1 = v1.distance(v2);
-        double d2 = v1.distance(v3);
-        double d3 = v2.distance(v3);
-        double a = 0;
-        double b = 0;
-        double c = Math.max(Math.max(d1, d2), d3);
-        if (c == d1) {
-            a = d2;
-            b = d3;
-        }
-        else if (c == d2) {
-            a = d1;
-            b = d3;
-        }
-        else if (c == d3) {
-            a = d1;
-            b = d2;
-        }
-        else {
-            return false;
-        }
+        double dotAB = (v1.getX() - v3.getX()) * (v2.getX() - v3.getX()) + (v1.getY() - v3.getY()) * (v2.getY() - v3.getY());
+        double dotBC = (v2.getX() - v1.getX()) * (v3.getX() - v1.getX()) + (v2.getY() - v1.getY()) * (v3.getY() - v1.getY());
+        double dotAC = (v1.getX() - v2.getX()) * (v3.getX() - v2.getX()) + (v1.getY() - v2.getY()) * (v3.getY() - v2.getY());
 
-        return Math.pow(a, 2) + Math.pow(b, 2) < Math.pow(c, 2);
+        return dotAB * dotAC * dotBC < 0;
     }
 
 
@@ -205,7 +169,7 @@ public class Triangle extends Shape {
             return false;
         }
 
-        return Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2);
+        return Math.abs(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) < 1.0e-13;
     }
 
 
