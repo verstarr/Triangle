@@ -1,6 +1,7 @@
 # TrueCarChallenge
 
 ### Triangle assignment (Implement in Java)  
+## DONE
 
 Create a program that takes as inputs 3 coordinates of triangle as points (x,y). It should be able to determine if the triangle is equilateral, acute, obtuse, right or if it&#39;s impossible to form a triangle given the points.
 
