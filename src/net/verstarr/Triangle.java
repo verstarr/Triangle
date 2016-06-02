@@ -8,6 +8,7 @@ public class Triangle extends Shape {
     private Point v1;
     private Point v2;
     private Point v3;
+    private boolean isTriangle;
 
     // Default triangle
     // Constructs a valid triangle
@@ -15,26 +16,23 @@ public class Triangle extends Shape {
         v1 = new Point(0, 0);
         v2 = new Point(1, 0);
         v3 = new Point(0, 1);
+        setTriangle(isTriangle(v1, v2, v3));
     }
 
     // Custom triangle by Points
     public Triangle(Point v1, Point v2, Point v3) {
-        if (!isTriangle(v1, v2, v3)) {
-            throw new IllegalArgumentException("These points do not form a triangle");
-        }
         this.v1 = v1;
         this.v2 = v2;
         this.v3 = v3;
+        setTriangle(isTriangle(v1, v2, v3));
     }
 
     // Custom triangle by manual Point input
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-        if (!isTriangle(x1, y1, x2, y2, x3, y3)) {
-            throw new IllegalArgumentException("These coordinates do not make points that form a triangle");
-        }
         v1 = new Point(x1, y1);
         v2 = new Point(x2, y2);
         v3 = new Point(x3, y3);
+        setTriangle(isTriangle(v1, v2, v3));
     }
 
     public Point getVertex1() {
@@ -71,6 +69,10 @@ public class Triangle extends Shape {
 
     public void setVertex3(double x3, double y3) {
         v3 = new Point(x3, y3);
+    }
+
+    public void setTriangle(boolean triangle) {
+        isTriangle = triangle;
     }
 
     /**
@@ -112,8 +114,12 @@ public class Triangle extends Shape {
         double d1 = v1.distance(v2);
         double d2 = v1.distance(v3);
         double d3 = v2.distance(v3);
+        System.out.println(d1 - d2);
+        System.out.println(d1 - d3);
+        System.out.println(d2 - d3);
 
-        return d1 == d2 && d1 == d3 && d2 == d3;
+        return isTriangle && Math.abs(d1 - d2) < 1.0e-13 && Math.abs(d1 - d3) < 1.0e-13 && Math.abs(d2 - d3) < 1.0e-13;
+
     }
 
     /**
@@ -125,7 +131,8 @@ public class Triangle extends Shape {
         double dotBC = (v2.getX() - v1.getX()) * (v3.getX() - v1.getX()) + (v2.getY() - v1.getY()) * (v3.getY() - v1.getY());
         double dotAC = (v1.getX() - v2.getX()) * (v3.getX() - v2.getX()) + (v1.getY() - v2.getY()) * (v3.getY() - v2.getY());
 
-        return dotAB * dotAC * dotBC > 0;
+        return isTriangle && dotAB * dotAC * dotBC > 0;
+
     }
 
 
@@ -138,7 +145,8 @@ public class Triangle extends Shape {
         double dotBC = (v2.getX() - v1.getX()) * (v3.getX() - v1.getX()) + (v2.getY() - v1.getY()) * (v3.getY() - v1.getY());
         double dotAC = (v1.getX() - v2.getX()) * (v3.getX() - v2.getX()) + (v1.getY() - v2.getY()) * (v3.getY() - v2.getY());
 
-        return dotAB * dotAC * dotBC < 0;
+        return isTriangle && dotAB * dotAC * dotBC < 0;
+
     }
 
 
@@ -150,26 +158,35 @@ public class Triangle extends Shape {
         double d1 = v1.distance(v2);
         double d2 = v1.distance(v3);
         double d3 = v2.distance(v3);
-        double a = 0;
-        double b = 0;
+        double a;
+        double b;
         double c = Math.max(Math.max(d1, d2), d3);
         if (c == d1) {
             a = d2;
             b = d3;
-        }
-        else if (c == d2) {
+        } else if (c == d2) {
             a = d1;
             b = d3;
-        }
-        else if (c == d3) {
+        } else if (c == d3) {
             a = d1;
             b = d2;
-        }
-        else {
+        } else {
             return false;
         }
 
-        return Math.abs(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) < 1.0e-13;
+        return isTriangle && Math.abs(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) < 1.0e-13;
+
+    }
+
+    public Point thirdPointEquilateral(Point p1, Point p2) {
+        double sin60 = Math.sin(60 * Math.PI / 180.0);
+        double cos60 = Math.cos(60 * Math.PI / 180.0);
+
+        return new Point(cos60 * (p1.getX() - p2.getX()) - sin60 * (p1.getY() - p2.getY()) + p2.getX(), sin60 * (p1.getX() - p2.getX()) + cos60 * (p1.getY() - p2.getY()) + p2.getY());
+    }
+
+    public String toString() {
+        return v1.toString() + ", " + v2.toString() + ", " + v3.toString();
     }
 
 
