@@ -1,7 +1,7 @@
 package test;
 
-import net.verstarr.Point;
-import net.verstarr.Triangle;
+import net.verstarr.TriangleAssignment.Point;
+import net.verstarr.TriangleAssignment.Triangle;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package net.verstarr;
+package net.verstarr.TriangleAssignment;
 
 /**
  * Created by Ver Andrew Starr on 5/31/2016.
