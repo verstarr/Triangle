@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c313c9db-3971-4c63-a25d-67337b10ecee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv___jb_bak___" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv___jb_old___" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv" afterPath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv" />
     </list>
     <ignored path="TrueCarChallenge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +104,8 @@
       <file leaf-file-name="map_reduce_input_data1.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.551723">
-              <caret line="999" column="59" selection-start-line="999" selection-start-column="59" selection-end-line="999" selection-end-column="59" />
+            <state vertical-scroll-proportion="-41.58621">
+              <caret line="1040" column="6" selection-start-line="1040" selection-start-column="6" selection-end-line="1040" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -157,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/net/verstarr/TriangleAssignment/Triangle.java" />
         <option value="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/readme.txt" />
         <option value="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv" />
+        <option value="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv___jb_bak___" />
       </list>
     </option>
   </component>
@@ -1037,7 +1037,7 @@
       <workItem from="1464755215220" duration="606000" />
       <workItem from="1464817856078" duration="14438000" />
       <workItem from="1465100053018" duration="2264000" />
-      <workItem from="1465169669142" duration="873000" />
+      <workItem from="1465169669142" duration="1114000" />
     </task>
     <task id="LOCAL-00001" summary="Wrote 106 tests&#10;Wrote a Main file with some tests as well">
       <created>1464840254932</created>
@@ -1105,7 +1105,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465170480990</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added more data">
+      <created>1465170544791</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1465170544791</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1141,7 +1147,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27992000" />
+    <option name="totallyTimeSpent" value="28233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1484,8 +1490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.551723">
-          <caret line="999" column="59" selection-start-line="999" selection-start-column="59" selection-end-line="999" selection-end-column="59" />
+        <state vertical-scroll-proportion="-41.58621">
+          <caret line="1040" column="6" selection-start-line="1040" selection-start-column="6" selection-end-line="1040" selection-end-column="6" />
           <folding />
         </state>
       </provider>
