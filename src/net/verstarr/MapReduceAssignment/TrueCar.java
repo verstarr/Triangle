@@ -1,7 +1,12 @@
 package org.myorg;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.regex.Pattern;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.conf.Configuration;
@@ -42,6 +47,22 @@ public class TrueCar extends Configured implements Tool {
     job.setOutputValueClass(IntWritable.class);
     return job.waitForCompletion(true) ? 0 : 1;
   }
+  
+  public static String dateConverter(String day) {
+	  Date date = null;
+	  String dateStr = "";
+	    
+	  SimpleDateFormat oldFormat = new SimpleDateFormat("MM/dd/yy");
+	  SimpleDateFormat newFormat = new SimpleDateFormat("yyyy-MM-dd");
+	  try {
+	    date = oldFormat.parse(day);
+		dateStr = newFormat.format(date);
+	  }
+	  catch (ParseException e) {
+		  e.printStackTrace();
+	  }
+	  return dateStr;
+  }
 
   public static class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
     private final static IntWritable one = new IntWritable(1);
@@ -57,12 +78,12 @@ public class TrueCar extends Configured implements Tool {
 			else {
 				String[] line = lineText.toString().split(",");
 			    String day = line[0].split(" ")[0];
-			    System.out.println("Day: " + day);
 			    String ab_test_campaign = line[3];
 			    String ab_test_variant = line[4];
+			    
 			      
 			    if (!ab_test_campaign.equalsIgnoreCase("")) {
-			    	pageview.set(day + "," + ab_test_campaign + "," + ab_test_variant);
+			    	pageview.set(dateConverter(day) + "," + ab_test_campaign + "," + ab_test_variant);
 			    	context.write(pageview, one);
 			    }
 			}
