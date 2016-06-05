@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c313c9db-3971-4c63-a25d-67337b10ecee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv" afterPath="$PROJECT_DIR$/src/net/verstarr/MapReduceAssignment/map_reduce_input_data1.csv" />
     </list>
     <ignored path="TrueCarChallenge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1037,7 +1036,7 @@
       <workItem from="1464755215220" duration="606000" />
       <workItem from="1464817856078" duration="14438000" />
       <workItem from="1465100053018" duration="2264000" />
-      <workItem from="1465169669142" duration="1114000" />
+      <workItem from="1465169669142" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="Wrote 106 tests&#10;Wrote a Main file with some tests as well">
       <created>1464840254932</created>
@@ -1111,7 +1110,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465170544791</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added more data">
+      <created>1465170785497</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1465170785497</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1147,7 +1152,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28233000" />
+    <option name="totallyTimeSpent" value="28238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
