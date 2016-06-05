@@ -178,12 +178,6 @@ public class Triangle extends Shape {
 
     }
 
-    public Point thirdPointEquilateral(Point p1, Point p2) {
-        double sin60 = Math.sin(60 * Math.PI / 180.0);
-        double cos60 = Math.cos(60 * Math.PI / 180.0);
-
-        return new Point(cos60 * (p1.getX() - p2.getX()) - sin60 * (p1.getY() - p2.getY()) + p2.getX(), sin60 * (p1.getX() - p2.getX()) + cos60 * (p1.getY() - p2.getY()) + p2.getY());
-    }
 
     public String toString() {
         return v1.toString() + ", " + v2.toString() + ", " + v3.toString();
