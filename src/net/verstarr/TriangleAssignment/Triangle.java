@@ -114,9 +114,6 @@ public class Triangle extends Shape {
         double d1 = v1.distance(v2);
         double d2 = v1.distance(v3);
         double d3 = v2.distance(v3);
-        System.out.println(d1 - d2);
-        System.out.println(d1 - d3);
-        System.out.println(d2 - d3);
 
         return isTriangle && Math.abs(d1 - d2) < 1.0e-13 && Math.abs(d1 - d3) < 1.0e-13 && Math.abs(d2 - d3) < 1.0e-13;
 
