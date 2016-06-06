@@ -8,6 +8,9 @@ public class Triangle extends Shape {
     private Point v1;
     private Point v2;
     private Point v3;
+    private double d1;
+    private double d2;
+    private double d3;
     private boolean isTriangle;
 
     // Default triangle
@@ -16,7 +19,11 @@ public class Triangle extends Shape {
         v1 = new Point(0, 0);
         v2 = new Point(1, 0);
         v3 = new Point(0, 1);
+        d1 = v1.distance(v2);
+        d2 = v1.distance(v3);
+        d3 = v2.distance(v3);
         setTriangle(isTriangle(v1, v2, v3));
+
     }
 
     // Custom triangle by Points
@@ -24,7 +31,11 @@ public class Triangle extends Shape {
         this.v1 = v1;
         this.v2 = v2;
         this.v3 = v3;
+        d1 = this.v1.distance(this.v2);
+        d2 = this.v1.distance(this.v3);
+        d3 = this.v2.distance(this.v3);
         setTriangle(isTriangle(v1, v2, v3));
+
     }
 
     // Custom triangle by manual Point input
@@ -32,7 +43,11 @@ public class Triangle extends Shape {
         v1 = new Point(x1, y1);
         v2 = new Point(x2, y2);
         v3 = new Point(x3, y3);
+        d1 = v1.distance(v2);
+        d2 = v1.distance(v3);
+        d3 = v2.distance(v3);
         setTriangle(isTriangle(v1, v2, v3));
+
     }
 
     public Point getVertex1() {
@@ -79,10 +94,6 @@ public class Triangle extends Shape {
      * Validates if three points form a triangle
      **/
     public boolean isTriangle() {
-        double d1 = v1.distance(v2);
-        double d2 = v1.distance(v3);
-        double d3 = v2.distance(v3);
-
         return d1 + d2 > d3 && d1 + d3 > d2 && d2 + d3 > d1;
     }
 
@@ -111,12 +122,7 @@ public class Triangle extends Shape {
      * (All sides are the same length => all angles are the same)
      **/
     public boolean isEquilateral() {
-        double d1 = v1.distance(v2);
-        double d2 = v1.distance(v3);
-        double d3 = v2.distance(v3);
-
         return isTriangle && Math.abs(d1 - d2) < 1.0e-13 && Math.abs(d1 - d3) < 1.0e-13 && Math.abs(d2 - d3) < 1.0e-13;
-
     }
 
     /**
@@ -152,9 +158,6 @@ public class Triangle extends Shape {
      * (a^2 + b^2 = c^2)
      **/
     public boolean isRight() {
-        double d1 = v1.distance(v2);
-        double d2 = v1.distance(v3);
-        double d3 = v2.distance(v3);
         double a;
         double b;
         double c = Math.max(Math.max(d1, d2), d3);
@@ -188,21 +191,14 @@ public class Triangle extends Shape {
     public double area() {
         // Heron's formula:
         // A = SquareRoot(s * (s - a) * (s - b) * (s - c))
-        // where s = (a + b + c) / 2, or 1/2 of the perimeter of the triangle
-        double a = v1.distance(v2);
-        double b = v1.distance(v3);
-        double c = v1.distance(v3);
-
-        double s = (a + b + c) / 2;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        // where s = (d1 + d2 + d3) / 2, or 1/2 of the perimeter of the triangle
+        double s = (d1 + d2 + d3) / 2;
+        return Math.sqrt(s * (s - d1) * (s - d2) * (s - d3));
     }
 
     @Override
     public double perimeter() {
         // P = a + b + c
-        double a = v1.distance(v2);
-        double b = v1.distance(v3);
-        double c = v1.distance(v3);
-        return a + b + c;
+        return d1 + d2 + d3;
     }
 }
