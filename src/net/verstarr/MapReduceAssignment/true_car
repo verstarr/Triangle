@@ -6,7 +6,7 @@ hadoop fs -rm -r /user/cloudera/truecar/input;
 hadoop fs -rm -r /user/cloudera/truecar/output;
 
 # Put input file
-hadoop fs -put map_reduce_input_data.csv /user/cloudera/truecar/input;
+hadoop fs -put map_reduce_input_data1.csv /user/cloudera/truecar/input;
 
 # Compile, package, and create a JAR 
 mkdir -p build;
