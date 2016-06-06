@@ -8,8 +8,7 @@ public class RunTriangle {
 
     public static void main(String[] args) throws IOException {
         // open file "geometry.txt" for reading
-        String path = new File(".").getAbsolutePath();
-        File file = new File(path + "\\src\\net\\verstarr\\TriangleAssignment\\triangle.txt");
+        File file = new File("src\\net\\verstarr\\TriangleAssignment\\triangle.txt");
         Scanner input = new Scanner(file);
 
         // read the coordinates of the vertices R, S, and T
