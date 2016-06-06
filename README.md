@@ -1,4 +1,4 @@
-# TrueCarChallenge
+# TrueCarTriangleChallenge
 
 ## Triangle assignment (Implement in Java)  
 ### COMPLETED
@@ -7,39 +7,5 @@ Create a program that takes as inputs 3 coordinates of triangle as points (x,y).
 
 Implementation is open ended and you can use as many classes as necessary. Please submit the java files (and any other files that might be part of your solution)
 
-How to:  
-
-
-## Map / Reduce assignment
-### COMPLETED
-First read up on Map / Reduce framework and Java Mapper / Reducer tutorial to get familiar with the framework.  
-
-Challenge details:
-We have data that comes in csv format where each row has the following structure:
-Event_date, visitor_id, page_name, ab_test_campaign , ab_test_variant, device_type, car_make
-Each row represents a click of a user on a website. (check attached input csv file for details)  
-
-Write a Map/Reduce Java job that would give us the following overview:
-The number of page views grouped by: day , ab_test_campaign, ab_test_variant of visitors that have non null/empty ab_test_campaign Day ab_test_campaign ab_test_variant page_views 2016-05- 16 ui_change A 1500 2016-05- 16 ui_change B 300
-
-Here is the signature of the Mapper class and its void map() method.:
-
-Mapper signature will look like that (mapper output (?) is up to your implementation):
-
-public static class Map extends Mapper&lt;LongWritable, Text, ?, ?&gt; {
-
-Map method:
-
-public void map(LongWritable key, Text value, Context context) throws IOException,
-
-InterruptedException
-
-The output of the reducer should be in csv (comma delimited format) following the structure of
-
-the table above.
-
-For your implementations you need at least a Mapper and Reducer java files. Assume that the
-
-input is in HDFS folders with multiple csv files (with millions of rows each)
-
-Please submit the java files (and any other files that might be part of your solution)
+How to run:
+I developed my solution in IntelliJ. To run solution, you may open this project in IntelliJ and run either RunTriangle or /test/TriangleTest. Triangle and Point classes are defined in their respective .java files. RunTriangle takes input from triangle.txt that has a format of 6 doubles per line (x1, y1, x2, y2, x3, y3). This program can determine if a triangle is a triangle, equilateral, acute, obtuse, and/or right. I implemented formulas such as the distance formula, the Pythagorean theorem, and dot product to name a view. I included an abstract Shape class with area and perimeter methods that are overridden in Triangle.java.
