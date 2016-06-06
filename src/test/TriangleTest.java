@@ -268,7 +268,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral1() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,-1)");
+        System.out.println("testIsEquilateral: (0,0), (1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -277,7 +277,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral2() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (-1,0), (0,-1)");
+        System.out.println("testIsEquilateral: (0,0), (-1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -286,7 +286,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral3() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,1)");
+        System.out.println("testIsEquilateral: (0,0), (1,0), (0,1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,1));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -307,7 +307,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral5() throws Exception {
-        System.out.println("testIsTriangle: (6,0), (-4,0), (1,5 * sqrt(3))");
+        System.out.println("testIsEquilateral: (6,0), (-4,0), (1,5 * sqrt(3))");
         Triangle triangle = new Triangle(new Point(6,0), new Point(-4,0), new Point(1, 5 * Math.sqrt(3)));
         boolean expResult = true;
         boolean result = triangle.isEquilateral();
@@ -316,7 +316,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral6() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsEquilateral: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -325,7 +325,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral7() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsEquilateral: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -334,7 +334,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral8() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsEquilateral: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(new Point(5,5), new Point(7,8), new Point(9,5));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -343,7 +343,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral9() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsEquilateral: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(new Point(-5,5), new Point(-7,8), new Point(-9,5));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -352,7 +352,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral10() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsEquilateral: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(new Point(-14,5), new Point(-7,8), new Point(-3,5));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -361,7 +361,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral11() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsEquilateral: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(new Point(14,5), new Point(7,8), new Point(3,5));
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -382,7 +382,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilatera13() throws Exception {
-        System.out.println("testIsTriangle: (6,0), (-4,0), (1,5 * sqrt(3))");
+        System.out.println("testIsEquilateral: (6,0), (-4,0), (1,5 * sqrt(3))");
         Triangle triangle = new Triangle(6,0,-4,0,1,5 * Math.sqrt(3));
         boolean expResult = true;
         boolean result = triangle.isEquilateral();
@@ -391,7 +391,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilatera14() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsEquilateral: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -400,7 +400,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral15() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsEquilateral: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -409,7 +409,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral16() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsEquilateral: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(5,5,7,8,9,5);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -418,7 +418,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral17() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsEquilateral: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(-5,5,-7,8,-9,5);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -427,7 +427,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral18() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsEquilateral: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(-14,5,-7,8,-3,5);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -436,7 +436,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsEquilateral19() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsEquilateral: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(14,5,7,8,3,5);
         boolean expResult = false;
         boolean result = triangle.isEquilateral();
@@ -473,7 +473,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute1() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,-1)");
+        System.out.println("testIsAcute: (0,0), (1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -482,7 +482,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute2() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (-1,0), (0,-1)");
+        System.out.println("testIsAcute: (0,0), (-1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -491,7 +491,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute3() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,1)");
+        System.out.println("testIsAcute: (0,0), (1,0), (0,1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,1));
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -521,7 +521,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute6() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsAcute: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -530,7 +530,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute7() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsAcute: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -539,7 +539,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute8() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsAcute: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(new Point(5,5), new Point(7,8), new Point(9,5));
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -548,7 +548,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute9() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsAcute: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(new Point(-5,5), new Point(-7,8), new Point(-9,5));
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -557,7 +557,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute10() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsAcute: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(new Point(-14,5), new Point(-7,8), new Point(-3,5));
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -566,7 +566,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute11() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsAcute: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(new Point(14,5), new Point(7,8), new Point(3,5));
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -596,7 +596,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute14() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsAcute: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -605,7 +605,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute15() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsAcute: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -614,7 +614,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute16() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsAcute: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(5,5,7,8,9,5);
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -623,7 +623,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute17() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsAcute: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(-5,5,-7,8,-9,5);
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -632,7 +632,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute18() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsAcute: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(-14,5,-7,8,-3,5);
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -641,7 +641,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute19() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsAcute: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(14,5,7,8,3,5);
         boolean expResult = false;
         boolean result = triangle.isAcute();
@@ -650,7 +650,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsAcute20() throws Exception {
-        System.out.println("testIsEquilateral: (0,4), (0,0), (Math.sqrt(12), 2)");
+        System.out.println("testIsAcute: (0,4), (0,0), (Math.sqrt(12), 2)");
         Triangle triangle = new Triangle(new Point(0,4), new Point(0,0), new Point(Math.sqrt(12), 2));
         boolean expResult = true;
         boolean result = triangle.isAcute();
@@ -675,7 +675,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse1() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,-1)");
+        System.out.println("testIsObtuse: (0,0), (1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -684,7 +684,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse2() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (-1,0), (0,-1)");
+        System.out.println("testIsObtuse: (0,0), (-1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,-1));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -693,7 +693,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse3() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,1)");
+        System.out.println("testIsObtuse: (0,0), (1,0), (0,1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,1));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -723,7 +723,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse6() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsObtuse: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -732,7 +732,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse7() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsObtuse: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -741,7 +741,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse8() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsObtuse: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(new Point(5,5), new Point(7,8), new Point(9,5));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -750,7 +750,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse9() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsObtuse: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(new Point(-5,5), new Point(-7,8), new Point(-9,5));
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -759,7 +759,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse10() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsObtuse: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(new Point(-14,5), new Point(-7,8), new Point(-3,5));
         boolean expResult = true;
         boolean result = triangle.isObtuse();
@@ -768,7 +768,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse11() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsObtuse: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(new Point(14,5), new Point(7,8), new Point(3,5));
         boolean expResult = true;
         boolean result = triangle.isObtuse();
@@ -798,7 +798,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse14() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsObtuse: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -807,7 +807,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse15() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsObtuse: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -816,7 +816,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse16() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsObtuse: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(5,5,7,8,9,5);
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -825,7 +825,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse17() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsObtuse: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(-5,5,-7,8,-9,5);
         boolean expResult = false;
         boolean result = triangle.isObtuse();
@@ -834,7 +834,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse18() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsObtuse: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(-14,5,-7,8,-3,5);
         boolean expResult = true;
         boolean result = triangle.isObtuse();
@@ -843,7 +843,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsObtuse19() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsObtuse: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(14,5,7,8,3,5);
         boolean expResult = true;
         boolean result = triangle.isObtuse();
@@ -859,7 +859,7 @@ public class TriangleTest {
      * */
     @org.junit.Test
     public void testIsRight() throws Exception {
-        System.out.println("testIsObtuse: (0,0), (1,0), (0,1)");
+        System.out.println("testIsRight: (0,0), (1,0), (0,1)");
         Triangle triangle = new Triangle();
         boolean expResult = true;
         boolean result = triangle.isRight();
@@ -868,7 +868,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight1() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,-1)");
+        System.out.println("testIsRight: (0,0), (1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(1,0), new Point(0,-1));
         boolean expResult = true;
         boolean result = triangle.isRight();
@@ -877,7 +877,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight2() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (-1,0), (0,-1)");
+        System.out.println("testIsRight: (0,0), (-1,0), (0,-1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,-1));
         boolean expResult = true;
         boolean result = triangle.isRight();
@@ -886,7 +886,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight3() throws Exception {
-        System.out.println("testIsTriangle: (0,0), (1,0), (0,1)");
+        System.out.println("testIsRight: (0,0), (1,0), (0,1)");
         Triangle triangle = new Triangle(new Point(0,0), new Point(-1,0), new Point(0,1));
         boolean expResult = true;
         boolean result = triangle.isRight();
@@ -907,7 +907,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight5() throws Exception {
-        System.out.println("testIsObtuse: (6,0), (-4,0), (1,5 * sqrt(3))");
+        System.out.println("testIsRight: (6,0), (-4,0), (1,5 * sqrt(3))");
         Triangle triangle = new Triangle(new Point(6,0), new Point(-4,0), new Point(1, 5 * Math.sqrt(3)));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -916,7 +916,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight6() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsRight: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -925,7 +925,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight7() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsRight: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(new Point(0,-2), new Point(5,-1), new Point(4,-4));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -934,7 +934,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight8() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsRight: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(new Point(5,5), new Point(7,8), new Point(9,5));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -943,7 +943,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight9() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsRight: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(new Point(-5,5), new Point(-7,8), new Point(-9,5));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -952,7 +952,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight10() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsRight: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(new Point(-14,5), new Point(-7,8), new Point(-3,5));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -961,7 +961,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight11() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsRight: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(new Point(14,5), new Point(7,8), new Point(3,5));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -982,7 +982,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight13() throws Exception {
-        System.out.println("testIsObtuse: (6,0), (-4,0), (1,5 * sqrt(3))");
+        System.out.println("testIsRight: (6,0), (-4,0), (1,5 * sqrt(3))");
         Triangle triangle = new Triangle(6,0,-4,0,1,5 * Math.sqrt(3));
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -991,7 +991,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight14() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (5,-1), (4,-4)");
+        System.out.println("testIsRight: (0,-2), (5,-1), (4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -1000,7 +1000,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight15() throws Exception {
-        System.out.println("testIsTriangle: (0,-2), (-5,-1), (-4,-4)");
+        System.out.println("testIsRight: (0,-2), (-5,-1), (-4,-4)");
         Triangle triangle = new Triangle(0,-2,5,-1,4,-4);
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -1009,7 +1009,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight16() throws Exception {
-        System.out.println("testIsTriangle: (5,5), (7,8), (9,5)");
+        System.out.println("testIsRight: (5,5), (7,8), (9,5)");
         Triangle triangle = new Triangle(5,5,7,8,9,5);
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -1018,7 +1018,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight17() throws Exception {
-        System.out.println("testIsTriangle: (-5,5), (-7,8), (-9,5)");
+        System.out.println("testIsRight: (-5,5), (-7,8), (-9,5)");
         Triangle triangle = new Triangle(-5,5,-7,8,-9,5);
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -1027,7 +1027,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight18() throws Exception {
-        System.out.println("testIsTriangle: (-14,5), (-7,8), (-3,5)");
+        System.out.println("testIsRight: (-14,5), (-7,8), (-3,5)");
         Triangle triangle = new Triangle(-14,5,-7,8,-3,5);
         boolean expResult = false;
         boolean result = triangle.isRight();
@@ -1036,7 +1036,7 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testIsRight19() throws Exception {
-        System.out.println("testIsTriangle: (14,5), (7,8), (3,5)");
+        System.out.println("testIsRight: (14,5), (7,8), (3,5)");
         Triangle triangle = new Triangle(14,5,7,8,3,5);
         boolean expResult = false;
         boolean result = triangle.isRight();
